@@ -1,0 +1,131 @@
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    background: $bgHeader;
+    -webkit-animation: delayImage 0.8s ease-in 0.5s;
+    -moz-animation: delayImage 0.8s ease-in 0.5s;
+    -o-animation: delayImage 0.8s ease-in;
+    animation: delayImage 0.8s ease-in;
+    .row {
+        align-items: center;
+    }
+    .logo {
+        margin: 0 auto;
+    }
+    .search {
+        text-align: center;
+        margin: 0 auto;
+        .icon {
+            position: absolute;
+            margin-left: percentage(1.7/12);
+            margin-top: 6px;
+            button {
+                border: 0;
+                background: none;
+            }
+            svg {
+                width: 28px;
+                height: 28px;
+            }
+        }
+        input {
+            box-shadow: 0 9px 40px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 30px;
+            padding: 10px 55px;
+            width: 80%;
+            outline: 0;
+            border: 0;
+            color: $black;
+        }
+    }
+    .redes_socias {
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        margin: 0 auto;
+        margin-top: 30px;
+        .item {
+            margin-right: 10px;
+        }
+        img {
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+
+@include responsivo(0, 374) {
+    .header {
+        .search {
+            .icon {
+                margin-left: percentage(1.6/12);
+            }
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, sm)) {
+    .header {
+        .search {
+            .icon {
+                margin-left: percentage(1.28/12);
+            }
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .header {
+        .search {
+            .icon {
+                margin-left: percentage(0.89/12);
+            }
+        }
+        .redes_socias {
+            margin-top: 0;
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, lg)) {
+    .header {
+        .search {
+            .icon {
+                margin-left: percentage(0.3/12);
+            }
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, xl)) {
+    .header {
+        .search {
+            .icon {
+                margin-left: percentage(0.32/12);
+            }
+        }
+    }
+}
+
+@include responsivo(1700, 1919) {
+    .header {
+        .search {
+            .icon {
+                margin-left: percentage(0.32/12);
+            }
+        }
+    }
+}
+
+@include responsivo(1920, 4000) {
+    .header {
+        .search {
+            .icon {
+                margin-left: percentage(0.28/12);
+            }
+        }
+    }
+}

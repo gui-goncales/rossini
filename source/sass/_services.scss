@@ -1,0 +1,169 @@
+.servicesHome {
+    padding: 20px 0;
+}
+
+@media (min-width: map-get($grid-breakpoints, lg)) {
+    .servicesHome {
+        padding: 120px 0 50px 0;
+    }
+}
+
+.takeServices {
+    background: linear-gradient(to bottom, #30314a, #4b475f);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border-radius: 60px 60px 0 0;
+    margin: 0 auto;
+    .item {
+        margin: 0 auto;
+        padding: 20px;
+        text-align: center;
+        cursor: pointer;
+        .icon {
+            img {
+                height: 60px;
+            }
+        }
+        h2 {
+            font-family: "Montserrat", sans-serif;
+            font-size: 1em;
+            font-weight: 500;
+            color: #fff;
+            margin: 10px 0;
+        }
+        .texto {
+            display: none;
+            color: #fff;
+            margin-bottom: 10px;
+            font-size: 0.875em;
+            font-weight: 400;
+            @include anima-slow;
+        }
+        &:hover {
+            background: linear-gradient(to bottom, #3b3ee5, #140f9f);
+            box-shadow: 0 9px 40px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 20px 20px 0 0;
+            margin-top: -30px;
+            width: 50%;
+            text-align: left;
+            h2 {
+                margin: 15px 0;
+                font-size: 1.125em;
+            }
+            .texto {
+                @include anima-slow;
+                display: block;
+            }
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .takeServices {
+        .item {
+            &:hover {
+                width: 50%;
+            }
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, lg)) {
+    .takeServices {
+        .item {
+            &:hover {
+                width: 40%;
+            }
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, xl)) {
+    .takeServices {
+        .item {
+            &:hover {
+                width: 30%;
+            }
+        }
+        .active {
+            background: linear-gradient(to bottom, #3b3ee5, #140f9f);
+            box-shadow: 0 9px 40px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 20px 20px 0 0;
+            margin-top: -30px;
+            width: 30%;
+            text-align: left;
+            h2 {
+                margin: 15px 0;
+                font-size: 1.125em;
+            }
+            .texto {
+                @include anima-slow;
+                display: block;
+            }
+        }
+    }
+}
+
+.serviceText {
+    .column {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        .imagem {
+            padding: 0 20px;
+        }
+        .texto {
+            padding: 0 20px;
+            color: $lightGray;
+        }
+    }
+    .texto {
+        p {
+            color: $lightGray;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .texto_portfolio {
+        margin-top: 70px;
+    }
+}
+
+.pageServices {
+    padding: 80px 0;
+    h3 {
+        font-family: "Montserrat", sans-serif;
+        font-weight: bold;
+        font-size: 1.58em;
+        margin-bottom: 30px;
+        color: $black;
+    }
+    .texto {
+        color: $lightGray;
+        p {
+            margin-bottom: 20px;
+        }
+    }
+    .imagem {
+        padding: 20px;
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .pageServices {
+        h3 {
+            font-size: 2.6em;
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, lg)) {
+    .pageServices {
+        .imagem {
+            padding: 20px 50px;
+        }
+    }
+}

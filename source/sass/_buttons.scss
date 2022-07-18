@@ -1,0 +1,92 @@
+.btn_gradient {
+    margin: 40px 0;
+    a {
+        background: linear-gradient(to right, #3b3ee5, #2b2c89);
+        color: #fff;
+        font-weight: 420;
+        padding: 15px 20px;
+        border-radius: 30px;
+        @include anima-slow;
+        svg {
+            width: 30px;
+            height: 30px;
+            margin-top: 2px;
+        }
+        &:hover {
+            @include anima-slow;
+            background: linear-gradient(to bottom, #8e68e7, #6047db);
+        }
+    }
+}
+
+.btnDefault {
+    a {
+        padding: 10px;
+        border-radius: 50%;
+        svg {
+            transform: rotate(90deg);
+            margin-top: -2px;
+            margin-left: -4px;
+        }
+    }
+}
+
+.vermais {
+    a {
+        font-size: 0.875em;
+        color: #fff;
+        @include anima-slow;
+        &:hover {
+            @include anima-slow;
+            color: $blue;
+        }
+    }
+}
+
+.leiamais {
+    a {
+        font-weight: bold;
+        font-size: 0.875em;
+        color: $blue;
+        @include anima-slow;
+        &:hover {
+            @include anima-slow;
+            color: $purple;
+        }
+    }
+}
+
+.btnEnviar {
+    background: linear-gradient(to right, #3b3ee5, #2b2c89);
+    color: #fff;
+    font-weight: 420;
+    padding: 15px 20px;
+    margin-top: 10px;
+    width: 150px !important;
+    @include anima-slow;
+    &:hover {
+        @include anima-slow;
+        background: linear-gradient(to bottom, #8e68e7, #6047db);
+    }
+}
+
+.btnEnviarContato {
+    background: linear-gradient(to right, #3b3ee5, #2b2c89);
+    color: #fff;
+    font-weight: 420;
+    padding: 15px 20px;
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 150px !important;
+    @include anima-slow;
+    &:hover {
+        @include anima-slow;
+        background: linear-gradient(to bottom, #8e68e7, #6047db);
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, xl)) {
+    .btnEnviar {
+        margin-left: 85px;
+    }
+}

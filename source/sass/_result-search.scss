@@ -1,0 +1,29 @@
+.page__results {
+    padding: 0px 0 80px 0;
+    a {
+        @include anima-slow;
+        color: $black;
+        h1 {
+            font-weight: 900;
+            font-size: 2.6em;
+        }
+        &:hover {
+            @include anima-slow;
+            color: $blue;
+        }
+    }
+    .mensagem-erro {
+        text-align: center;
+        color: $blue;
+        font-size: 1.125em;
+        font-weight: bold;
+        padding: 50px 0;
+        svg {
+            width: 220px;
+            height: 220px;
+            path {
+                fill: $blue;
+            }
+        }
+    }
+}

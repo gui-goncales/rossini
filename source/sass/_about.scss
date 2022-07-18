@@ -1,0 +1,40 @@
+.aboutUs {
+    padding: 80px 0;
+    .row {
+        align-items: center;
+    }
+    h2 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 3.4em;
+        line-height: 1;
+        font-weight: bold;
+        color: $black;
+    }
+    .texto {
+        margin-top: 20px;
+        color: $lightGray;
+        p {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, lg)) {
+    .aboutUs {
+        padding: 0 0 80px 0;
+    }
+}
+
+.aboutPage {
+    .columnHideMobile {
+        display: none;
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, lg)) {
+    .aboutPage {
+        .columnHideMobile {
+            display: block;
+        }
+    }
+}

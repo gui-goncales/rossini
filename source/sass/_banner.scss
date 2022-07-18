@@ -1,0 +1,431 @@
+.bannerDefault {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    -webkit-animation: delayImage 0.8s ease-in 0.5s;
+    -moz-animation: delayImage 0.8s ease-in 0.5s;
+    -o-animation: delayImage 0.8s ease-in;
+    animation: delayImage 0.8s ease-in;
+    .row {
+        flex-wrap: wrap-reverse;
+    }
+    .title {
+        text-transform: uppercase;
+        font-weight: 900;
+        margin-bottom: 40px;
+        color: $purple;
+        &:after {
+            content: "";
+            display: block;
+            background: $purple;
+            width: 20px;
+            height: 4px;
+        }
+    }
+    .fraseBanner {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-top: 80px;
+        .texto {
+            font-size: 0.875em;
+            font-weight: 500;
+            color: $lightGray;
+            padding: 0 20px;
+        }
+    }
+    h2 {
+        font-family: "Montserrat", sans-serif;
+        font-size: 2.5em;
+        font-weight: 800;
+        color: $black;
+        line-height: 1;
+        margin-bottom: 20px;
+    }
+    .subtitle {
+        margin-bottom: 20px;
+        font-weight: 500;
+        color: $lightGray;
+    }
+}
+
+@include responsivo(0, 374) {
+    .bannerDefault {
+        h2 {
+            font-size: 2em;
+        }
+    }
+}
+
+@include responsivo(375, 424) {
+    .bannerDefault {
+        .fraseBanner {
+            .texto {
+                padding: 0 10px;
+            }
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .bannerDefault {
+        .fraseBanner {
+            .texto {
+                padding: 0 10px;
+            }
+        }
+        h2 {
+            font-size: 2.4em;
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, lg)) {
+    .bannerDefault {
+        h2 {
+            font-size: 3em;
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints, xl)) {
+    .bannerDefault {
+        h2 {
+            font-size: 3.8em;
+        }
+        .fraseBanner {
+            .texto {
+                padding: 0 30px;
+            }
+        }
+    }
+}
+
+@include responsivo(1400, 4000) {
+    .bannerDefault {
+        h2 {
+            font-size: 4.5em;
+        }
+        .fraseBanner {
+            .texto {
+                padding: 0 60px;
+            }
+        }
+    }
+}
+
+.bannerHome {
+    -webkit-animation: delayImage 0.8s ease-in 0.5s;
+    -moz-animation: delayImage 0.8s ease-in 0.5s;
+    -o-animation: delayImage 0.8s ease-in;
+    animation: delayImage 0.8s ease-in;
+    .imagem {
+        background: url("../img/bg_banner.png") no-repeat top right;
+        background-size: contain;
+        width: 100%;
+        height: 280px;
+        margin-bottom: 250px;
+        .arrow {
+            display: none;
+            margin-top: -50px;
+            svg {
+                width: 50px;
+                height: 50px;
+            }
+        }
+        .video {
+            margin: 0 auto;
+            margin-top: -100px;
+            video {
+                box-shadow: 0 9px 40px 10px rgba(0, 0, 0, 0.2);
+                border-radius: 15px;
+                height: 225px;
+            }
+            &:after {
+                content: "";
+                display: block;
+                z-index: -1;
+                background: url("../img/detail_dots.png") no-repeat top center;
+                background-size: contain;
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                right: 0;
+                margin-top: -30px;
+            }
+        }
+    }
+}
+
+@include responsivo(0,
+374) {
+    .bannerHome {
+        .imagem {
+            height: 210px;
+            .video {
+                video {
+                    height: 169px;
+                }
+            }
+        }
+    }
+}
+
+@include responsivo(375,
+424) {
+    .bannerHome {
+        .imagem {
+            height: 250px;
+            .video {
+                video {
+                    height: 200px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints,
+sm)) {
+    .bannerHome {
+        .imagem {
+            height: 370px;
+            margin-bottom: 280px;
+            .arrow {
+                margin-top: -100px;
+                svg {
+                    width: 80px;
+                    height: 80px;
+                }
+            }
+            .video {
+                video {
+                    height: 290px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints,
+md)) {
+    .bannerHome {
+        .imagem {
+            height: 237px;
+            margin-bottom: 50px;
+            .arrow {
+                display: block;
+                margin-left: -50px;
+                margin-top: -80px;
+            }
+            .video {
+                video {
+                    height: 160px;
+                }
+                &:after {
+                    right: percentage(0.8/12);
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints,
+lg)) {
+    .bannerHome {
+        .imagem {
+            height: 320px;
+            .arrow {
+                margin-top: -140px;
+                margin-left: -50px;
+            }
+            .video {
+                video {
+                    height: 215px;
+                }
+                &:after {
+                    right: percentage(0.5/12);
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints,
+xl)) {
+    .bannerHome {
+        .imagem {
+            height: 390px;
+            .arrow {
+                margin-top: -200px;
+                margin-left: -100px;
+                svg {
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+            .video {
+                video {
+                    height: 260px;
+                }
+                &:after {
+                    right: percentage(-1/12);
+                }
+            }
+        }
+    }
+}
+
+@include responsivo(1400,
+4000) {
+    .bannerHome {
+        .imagem {
+            height: 450px;
+            .arrow {
+                margin-top: -240px;
+                margin-left: -100px;
+            }
+            .video {
+                video {
+                    height: 300px;
+                }
+            }
+        }
+    }
+}
+
+.bannerQuemSomos {
+    -webkit-animation: delayImage 0.8s ease-in 0.5s;
+    -moz-animation: delayImage 0.8s ease-in 0.5s;
+    -o-animation: delayImage 0.8s ease-in;
+    animation: delayImage 0.8s ease-in;
+    .imagem {
+        background: url("../img/detail_quem_somos_banner.png") no-repeat bottom right;
+        background-size: contain;
+        width: 100%;
+        height: 280px;
+        margin-bottom: 250px;
+        .arrow {
+            display: none;
+            margin-top: -50px;
+            svg {
+                width: 50px;
+                height: 50px;
+            }
+        }
+        .video {
+            margin: 0 auto;
+            margin-top: -100px;
+            video {
+                box-shadow: 0 9px 40px 10px rgba(0, 0, 0, 0.2);
+                border-radius: 15px;
+                height: 225px;
+            }
+        }
+    }
+}
+
+@include responsivo(0,
+374) {
+    .bannerQuemSomos {
+        .imagem {
+            height: 180px;
+            .video {
+                video {
+                    height: 169px;
+                }
+            }
+        }
+    }
+}
+
+@include responsivo(375,
+424) {
+    .bannerQuemSomos {
+        .imagem {
+            height: 220px;
+            .video {
+                video {
+                    height: 200px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints,
+sm)) {
+    .bannerQuemSomos {
+        .imagem {
+            height: 370px;
+            margin-bottom: 280px;
+        }
+        .video {
+            video {
+                height: 280px;
+            }
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints,
+md)) {
+    .bannerQuemSomos {
+        .imagem {
+            .video {
+                position: absolute;
+                margin-top: 0;
+                top: 12rem;
+                left: -10rem;
+                video {
+                    height: 160px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints,
+lg)) {
+    .bannerQuemSomos {
+        .imagem {
+            .video {
+                video {
+                    height: 215px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: map-get($grid-breakpoints,
+xl)) {
+    .bannerQuemSomos {
+        .imagem {
+            .video {
+                top: 15rem;
+                left: -15rem;
+                video {
+                    height: 260px;
+                }
+            }
+        }
+    }
+}
+
+@include responsivo(1400,
+4000) {
+    .bannerQuemSomos {
+        .imagem {
+            .video {
+                top: 15rem;
+                left: -15rem;
+                video {
+                    height: 300px;
+                }
+            }
+        }
+    }
+}
